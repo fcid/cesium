@@ -3,6 +3,19 @@ Change Log
 
 Beta Releases
 -------------
+
+### b17 - 2013-06-03
+
+* Breaking changes:
+   * Replaced `Uniform.getFrameNumber` and `Uniform.getTime` with `Uniform.getFrameState`, which returns the full frame state.    
+* Added `DrawCommand.cull` to avoid redundant visibility checks.
+* Added `czm_morphTime` automatic GLSL uniform.
+* Added support for floating-point textures.
+* Fixed polyline clipping artifact. [#728](https://github.com/AnalyticalGraphicsInc/cesium/issues/728).
+* Added `IntersectionTests.trianglePlaneIntersection`.
+* Fixed polygon crossing international date line for 2D and Columbus view
+* Added `computeHorizonCullingPoint`, `computeHorizonCullingPointFromVertices`, and `computeHorizonCullingPointFromExtent` methods to `EllipsoidalOccluder` and used them to build a more accurate horizon occlusion test for terrain rendering.
+
 ### b16 - 2013-05-01
 * Breaking changes:
    * Removed the color, outline color, and outline width properties of polylines. Instead, use materials for polyline color and outline properties. Code that looked like:
